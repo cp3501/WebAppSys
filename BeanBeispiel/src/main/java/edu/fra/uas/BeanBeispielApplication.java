@@ -28,4 +28,6 @@ public class BeanBeispielApplication {
 
     /* Das ist jetzt mein zweiter commit bzw. Kommentar auf meinem lokalen Rechner, also kein codespaces! */
 
+    //update: In codespaces musste ich die updates "pullen"!
+
 }

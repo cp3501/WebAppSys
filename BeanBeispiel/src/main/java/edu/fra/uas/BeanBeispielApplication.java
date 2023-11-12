@@ -26,4 +26,6 @@ public class BeanBeispielApplication {
         return action;
     }
 
+    /* Das ist jetzt mein zweiter commit bzw. Kommentar auf meinem lokalen Rechner, also kein codespaces! */
+
 }

@@ -4,7 +4,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
+/*
+Das ist jetzt mein allererster coomit bzw. kommentar, den ich jetzt hinzufuegen werden auf mein github acc!
+*/ 
 @SpringBootApplication
 public class BeanBeispielApplication {
 

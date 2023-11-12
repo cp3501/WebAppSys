@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class FirstService {
 
-	@Autowired
-	private SecondService secondService;
+	//@Autowired
+	private SecondService secondService = new SecondService();
 	
 	public FirstService() {}
 	

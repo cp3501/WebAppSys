@@ -13,7 +13,7 @@ public class BeanController {
     private MessageService messageService;
 
     public String putMessage(String message){
-        messageService.setMessage("put message from Beancontroller"+message);
+        messageService.setMessage("put message from Beancontroller: "+message);
     
             return messageService.getMessage();
     }

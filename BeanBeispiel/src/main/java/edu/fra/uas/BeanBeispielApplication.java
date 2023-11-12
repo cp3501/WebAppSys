@@ -11,6 +11,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+//Bei der Injizierung werden sie auch mitimportiert
+import edu.fra.uas.controller.BeanController;
 import edu.fra.uas.service.MessageService;
 /*
 Das ist jetzt mein allererster coomit bzw. kommentar, den ich jetzt hinzufuegen werden auf mein github acc!
@@ -18,6 +20,11 @@ Das ist jetzt mein allererster coomit bzw. kommentar, den ich jetzt hinzufuegen 
 @SpringBootApplication
 public class BeanBeispielApplication {
     private static final Logger log =LoggerFactory.getLogger(BeanBeispielApplication.class);
+
+    //hier wird jetzt Beancontroller injiziert
+    @Autowired
+    private BeanController beanController;
+
 
 //Ausserhalb der Main-Methode wird folgende Zeile hinzugefuegt
     @Autowired
@@ -53,6 +60,10 @@ public class BeanBeispielApplication {
                 System.out.println(messageService.getMessage());
                 messageService.setMessage("test");
                 System.out.println(messageService.getMessage());
+
+                log.debug(beanController.putMessage("Hallo Welt"));
+
+
 
 /*Anmerkungen zu Autowired: Wenn man es weglaesst, so erhaelt man eine Nullpointer-Exception! D.h., dass
  * die Klasse nicht injiziert wurde.

@@ -13,7 +13,16 @@ public class BeanBeispielApplication {
     public static void main(String[] args) {
         SpringApplication.run(BeanBeispielApplication.class, args);
     }
-
+    /*Anmerkungen zur 1. Aufgabe: Aufgabe war es die Annotation zu löschen.
+     * Ich hab das ausgeklammert, was den selben Effekt auslöst.
+     * Hierbei wird die Sysout-Line nicht ausgeprintet (hier: "Hello World")
+     * Wenn man die Bean-Notation lässt, so wird dies ausgefuehrt.
+     *"Dies (@Bean) bewirkt,  dass  der  Spring  
+     *Container  nach  dem  Start  der  Anwendung  die  Bean  unmitelbar  ausführt. 
+     * Die  Bean  ist  dabei  das 
+     *Rückgabeobjekt der anonymen Klasse CommandLineRunner" 
+     */
+     
     @Bean
     CommandLineRunner init() {
         CommandLineRunner action = new CommandLineRunner() {

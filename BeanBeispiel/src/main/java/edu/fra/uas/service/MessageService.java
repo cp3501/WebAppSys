@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class MessageService {
     private static final Logger log = LoggerFactory.getLogger(MessageService.class);
 
-
+    //testupdate aus meinem lenovo!
     //deklariere message vom type String
     private String message;
     

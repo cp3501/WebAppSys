@@ -1,4 +1,8 @@
 package edu.fra.uas;
+//Import der Logger-Klassen
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 // @Autowired-Annotation wurde importiert
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +17,7 @@ Das ist jetzt mein allererster coomit bzw. kommentar, den ich jetzt hinzufuegen 
 */ 
 @SpringBootApplication
 public class BeanBeispielApplication {
+    private static final Logger log =LoggerFactory.getLogger(BeanBeispielApplication.class);
 
 //Ausserhalb der Main-Methode wird folgende Zeile hinzugefuegt
     @Autowired

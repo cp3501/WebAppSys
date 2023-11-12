@@ -1,14 +1,27 @@
 package edu.fra.uas;
 
+// @Autowired-Annotation wurde importiert
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+
+import edu.fra.uas.service.MessageService;
 /*
 Das ist jetzt mein allererster coomit bzw. kommentar, den ich jetzt hinzufuegen werden auf mein github acc!
 */ 
 @SpringBootApplication
 public class BeanBeispielApplication {
+
+//Ausserhalb der Main-Methode wird folgende Zeile hinzugefuegt
+    @Autowired
+    private MessageService messageService;
+    /*hier wurde jetzt die Klasse MessageService (welche mit Component zu einer Bean instanziiert wurde)
+     * in die Main-Klasse injiziert durch die @Autowired-Annotation
+     * 
+     */
+
 
     public static void main(String[] args) {
         SpringApplication.run(BeanBeispielApplication.class, args);
@@ -29,7 +42,17 @@ public class BeanBeispielApplication {
 
             @Override
             public void run(String... args) {
-                System.out.println("Hello World");
+                //ich lasse das mal rein
+                System.out.println("Hello World durch einfaches sysout!");
+                messageService.setMessage("Hello World durch mS-Klasse");
+                System.out.println(messageService.getMessage());
+                messageService.setMessage("test");
+                System.out.println(messageService.getMessage());
+
+/*Anmerkungen zu Autowired: Wenn man es weglaesst, so erhaelt man eine Nullpointer-Exception! D.h., dass
+ * die Klasse nicht injiziert wurde.
+ */
+
             }
         };
         return action;

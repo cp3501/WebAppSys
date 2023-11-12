@@ -13,9 +13,19 @@ public class MessageService {
     //deklariere message vom type String
     private String message;
     
-    //public Methode soll jetzt die message returnen mit getMessage
 
-  
+    private int counter;
+    public int increment(){
+    this.counter++;
+    return counter;
+   
+    }
+    public void setCounter(int counter){
+        this.counter=counter;
+    }
+    
+
+    //public Methode soll jetzt die message returnen mit getMessage
     public String getMessage(){
         log.debug(message);
         return message;
@@ -25,6 +35,9 @@ public class MessageService {
     //diese Methode soll die message setten also aendern (Getter und Setter- Methoden)!
     public void setMessage(String message){
           log.debug( this.message= message);
+    }
+    public Integer getCounter() {
+        return counter;
     }
 
 }

@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Bean;
 public class SpringIoCApplication {
 
     // v1instantiating
-    @Autowired
+   // @Autowired
     private MasterV1 masterV1;
 
     // v3autowired

@@ -1,16 +1,22 @@
 package edu.fra.uas;
 
-import edu.fra.uas.v1instantiating.MasterV1;
-import edu.fra.uas.v2setter.Drilling;
-import edu.fra.uas.v2setter.Journeyman;
-import edu.fra.uas.v2setter.MasterV2;
-import edu.fra.uas.v3autowired.MasterV3;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import edu.fra.uas.v1instantiating.MasterV1;
+import edu.fra.uas.v2setter.Drilling;
+import edu.fra.uas.v2setter.Journeyman;
+import edu.fra.uas.v2setter.MasterV2;
+import edu.fra.uas.v3autowired.MasterV3;
+
+
+/*Update:
+ * Die Annotaitonen: @Bean @Component @Controller etc. sind alle Beans, wobei
+ * die Annotation @Bean ein Überbegriff dafür ist. Die Annotationen sind für bestimmte Anwendungsereiche gedacht.
+ */
 @SpringBootApplication
 public class SpringIoCApplication {
 

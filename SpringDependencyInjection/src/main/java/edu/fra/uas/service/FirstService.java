@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class FirstService {
 
-	//@Autowired
+	@Autowired
 	private SecondService secondService = new SecondService();
 	
 	public FirstService() {}
@@ -18,10 +18,10 @@ public class FirstService {
 //	}
 	
 	// Setter Injection
-//	@Autowired
-//	public void setSecondService(SecondService secondService) {
-//		this.secondService = secondService;
-//	}
+	@Autowired
+	public void setSecondService(SecondService secondService) {
+	this.secondService = secondService;
+}
 	
 	public void doSomething() {
 		secondService.doSomething();

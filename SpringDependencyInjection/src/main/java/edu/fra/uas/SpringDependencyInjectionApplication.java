@@ -7,12 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import edu.fra.uas.service.FirstService;
+import edu.fra.uas.service.SecondService;
 
 @SpringBootApplication
 public class SpringDependencyInjectionApplication {
 	
-	@Autowired
-	private FirstService firstService;
+	//@Autowired
+	//private FirstService firstService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringDependencyInjectionApplication.class, args);
@@ -25,7 +26,9 @@ public class SpringDependencyInjectionApplication {
 			@Override
 			public void run(String... args) throws Exception {
 				FirstService firstService = new FirstService();
-				firstService.doSomething();
+				SecondService secondService= new SecondService();
+			 firstService.setSecondService(secondService);
+				secondService.doSomething();
 			}
 		};
 		return action;

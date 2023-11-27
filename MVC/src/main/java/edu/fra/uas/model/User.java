@@ -77,6 +77,8 @@ public class User implements Serializable {
         this.password = password;
     }
 
+
+    // die Mehtoden equals() und hashCode() sind wichig für die Repositorys bzw. Datenbanken, damit Klassen einheitlich und identifizierbar eingespiechert werden!
     @Override
     public boolean equals(Object object) {
         if (object == null) 
